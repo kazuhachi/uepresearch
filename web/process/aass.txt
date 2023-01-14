@@ -1,0 +1,125 @@
+
+
+
+
+if (title, campus .... have atleast one value){
+    //query research by basic details
+
+    filterresearchByAuthorOrKeyword
+    
+
+
+
+
+}else{
+    filterResearchBySubDetailsPhase1
+    
+}
+
+
+
+
+// @param  $researchId 
+//         $conn        
+
+
+// filter by presentation, fund, patent
+function filterresearchByAuthorOrKeyword{
+
+    if (authors and keywords have atleast one value){
+        //query 
+
+        if (authors and keywords have value){
+            //query research by author and keyword
+
+            filterResearchBySubDetails
+
+            // final result !!
+
+        }
+
+        if (authors has value AND keyword has nothing){
+
+        }
+
+        if (keyword has value AND authors has nothing){
+
+        }
+
+        
+    }else{
+
+        filterResearchBySubDetails()
+        // final result
+        
+    }
+
+}
+
+
+
+filterResearchBySubDetails  -- function
+
+
+
+
+// count num rows
+
+// limit
+
+
+
+
+//unique seach
+        // create cookie custom search flag that it is a unique search
+        // search reseearch with limited rows
+        
+        // if user click for more results
+            // check if custom search flag is true
+
+                // throw second list of research
+
+            
+            else//
+
+                 
+                
+
+
+        // else
+
+
+
+// solution
+//
+SELECT DISTINCT r.* 
+FROM research r
+INNER JOIN 
+	(	SELECT ra.researchId
+		FROM research r
+     	INNER JOIN researchauthor ra
+			ON ra.ResearchId = r.ResearchId
+		WHERE ra.AuthorId in ('44','42')
+		GROUP BY r.ResearchId
+		HAVING COUNT(*) > 1 ) sub_ra
+ON r.researchId = sub_Ra.researchId
+    
+INNER JOIN 
+    (	SELECT rk.researchId
+		FROM research r
+		INNER JOIN researchkeywords rk
+		WHERE rk.KeywordId in ('8')
+		GROUP BY r.ResearchId
+		HAVING COUNT(*) > 1 ) sub_rk
+ON r.researchId = sub_rk.researchId
+
+INNER JOIN researchpresentation rpre 
+	ON rpre.ResearchId = r.ResearchId	
+    
+INNER JOIN researchfunding rf 
+	ON rf.ResearchId = r.ResearchId
+
+INNER JOIN researchpatents rpat 
+	ON rpat.ResearchId = r.ResearchId
+
+WHERE r.title like '%inventsion%'

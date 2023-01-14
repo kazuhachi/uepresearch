@@ -1,0 +1,57 @@
+.dashboard-table  tr{
+	padding: 0px 20px!important;
+}
+
+
+.greetings{
+	font-size: 18px;
+}
+
+.greetings #name{
+	font-weight: bold;
+}
+
+
+.list-info > div{
+	display: inline-block;
+	margin-right: 20px;
+}
+
+.list-info > div:after{
+	content: "    -      "
+}
+
+.collapsable-div{
+	padding: 5px 10px;
+	
+}
+
+
+
+.collapsable-div button{
+	border: none;
+	padding: 2px 10px;
+}
+
+.collapsable-div .collapsable-item{
+	border-radius: 3px;
+	border: 1px solid #dee2e6;
+	padding: 5px 5px;
+	margin-bottom: 5px;
+	background-color: #efefef;
+}
+
+.collapsable-div .collapsable-item .collapse-header > div{
+	display: inline-block	;
+}
+
+.collapse-header{
+	cursor: pointer;
+}
+
+.collapse-body{
+	padding: 20px 40px 10px 40px;
+}
+.collapse-signature{
+	padding-top: 10px;;
+}

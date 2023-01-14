@@ -1,0 +1,277 @@
+form label{
+	font-weight: bold;
+	color: gray;
+	margin-bottom: 0;
+
+}
+
+.form-row{
+	display: flex;
+}
+
+
+
+
+.inputs{
+	width: 100%;
+	border-radius: 3px;
+	padding: 5px 10px;
+	border: solid 1px #cccccc;
+}
+
+.input-title, .input-abstract{
+	min-height: 100px;
+}
+
+.input-file-abstract{
+	display: none;
+}
+
+
+.abstract-input{
+	background-color: #efefef;
+	padding : 5px;
+	border-radius: 3px;
+	border: px solid #dee2e6;
+}
+
+.insert-abstract{
+	margin: auto auto;
+	text-align: center;
+
+}
+
+.insert-abstract-btn{
+	padding: 10px;
+	border: 2px dashed #cccccc;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.insert-abstract-btn:hover{
+	background-color: #e3e3e3;
+	transition: background-color 300ms;
+}
+
+.insert-abstract-btn i{
+	font-size: 40px;
+	margin-right: 10px;
+}
+
+
+.insert-abstract-btn > div{
+	display: inline-block
+}
+
+.dropdown-suggestion{
+	position: absolute;
+	background-color: white;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	display: none;
+	box-shadow: 0px 4px 10px -2px gray;
+	z-index: 4;
+}
+
+.suggestion-item, #add-suggestion-option{
+	padding: 5px 10px;
+	cursor: pointer;
+	
+}
+
+.suggestion-item[focused]{
+	background-color: pink;
+}
+
+.suggestion-item:hover{
+	background-color: #eaeaea;
+	cursor: pointer;
+}
+
+#add-suggestion-option{
+	font-size: 12px;
+	/* background-color: #eaeaea; */
+}
+
+#add-suggestion-option i{
+	margin-right: 5px;
+}
+
+.dropdown-suggestion .counter{
+	float: right;
+	font-size: 10px;
+	line-height: 20px;
+}
+
+
+.file-info{
+	border-left: 3px dashed white;
+	display: flex;
+}
+
+.file-info .file-name{
+	margin: auto;
+	word-break: break-all;
+	font-size: 11px;
+}
+
+
+input:focus, textarea:focus, button:focus, select:focus, form button:focus{
+	outline: none;
+	transition: 0.2s;
+}
+
+input:disabled{
+	background-color: #eaeaea;
+	cursor: not-allowed;
+}
+
+.item-container .item{
+	margin-top: 5px;
+	margin-left: 5px;
+	display: inline-block;
+	border: 1px solid #cccccc;
+	background-color: #eaeaea;
+}
+
+#page-container .item{
+	margin-top: 0;
+}
+
+
+
+
+.item-container div{
+	border-radius: 25px;
+	border: none;
+	padding: 3px 5px;
+	width: auto;
+}
+
+.item-container .item div i{
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+.submit-buttons{
+	text-align: right;
+	margin-top: 20px;
+}
+
+.submit-buttons button{
+	border-radius: 3px;
+	border: none;
+	padding: 5px 10px;
+	background-color: #8b9da7;
+	color: white;
+	font-weight: bold;
+	margin-right: 0px;
+}
+
+.submit-buttons .cancel-research-button:hover, .submit-buttons .add-research-button:hover{
+	background-color: #6c93c1;
+}
+
+.submit-buttons [type='checkbox']{
+	position: relative;
+	top: 1px;
+}
+
+.submit-buttons label{
+	cursor: pointer;
+	line-height: 12px;
+}
+
+.confirm-option{
+	margin-bottom: 10px;
+}
+
+.confirm-info{
+	margin: 0px 10px;
+	background-color: transparent;
+	border: 1px solid gray;
+	padding: 0px 5px;
+	border-radius: 3px;
+
+	margin-right: 10px;
+	color: gray;
+	font-size: 15px;
+
+
+}
+
+
+.pop-info{
+	position: absolute;
+	width: 150px;
+	top: 1;
+	width: 300px;
+}
+
+
+
+
+
+.additional-details .header-tag{
+	font-weight: bold;
+	padding: 10px 10px;
+}
+
+
+
+.additional-details-add-button i{
+	
+}
+
+.additional-details .list .no-data{
+	text-align: center;
+	font-weight: bold;
+	color: #c7c3c3;
+	margin-bottom: 40px;
+}
+
+.item-container {
+	margin-bottom: 5px;
+	text-align: left
+}
+
+
+.item-container div{
+	display: inline-block;
+
+
+}
+
+.item-container button, .add-page{
+	padding: 5px 10px;
+	border: none;
+	border-radius: 3px;
+	color: white;
+	background-color: gray;
+}
+
+
+
+#research-edit{
+	display: none;
+}
+
+
+.abstract-container{
+	position: relative;
+}
+
+.close-expandable{
+	display: none;
+}
+
+.expand-btn{
+	position: absolute;
+	right: 5px;
+	bottom: 10px;
+	opacity: 0.5;
+}
+
+.expand-btn:hover{
+	opacity: 0.8;
+}

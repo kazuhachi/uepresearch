@@ -1,0 +1,132 @@
+$(document).ready(function(){
+
+
+
+
+	$(document).on("click",function(){
+		$("#profile-option").slideUp(100);
+	})
+
+
+	$(".quick-acc-profile .name").on("click", function(e){
+		e.stopPropagation();
+		$("#profile-option").slideDown(100);
+	})
+	
+
+	$('[data-toggle="datepicker"]').datepicker();
+
+	// nav items silde / effect
+	$(".nav-item").on("click", function(){
+		$(this).next().slideToggle(200, function(){
+			//
+		});
+		var child = $(this).children('.fa-angle-down');
+		if (child.attr("data-rotated") == "false"){
+			child.css({
+				'transform' : 'rotate(90deg)',
+				'transition' : '0.2s'
+			})
+
+			child.attr("data-rotated", true)
+
+		}else{
+			child.css({
+				'transform' : 'rotate(0deg)'
+			})
+			child.attr("data-rotated", false)
+		}
+
+		
+	})
+
+
+	//  navigator-slider
+	$(".btn-slide-cont").on("click", function(){
+		var wid = 215;  //specified width in css
+		var nav = $(".nav-list-cont");
+		var innerCont = $(".inner-content");
+
+		if (nav.css("margin-left") == "0px"){
+			nav.css({"margin-left" :  -1 * wid})
+			innerCont.css({"margin-left" : 0})
+			// nav.addClass("shrink");
+		}else{
+			// nav.removeClass("shrink");
+			nav.css({"margin-left" : "0px"});
+			innerCont.css({"margin-left" : 200})
+		}	
+	})
+
+
+	// tooltip   message  /  error  /  tip
+	$('[data-cus-tooltip]').on("mouseover", function(){
+		var tooltipType = $(this).attr("data-tooltip-type");
+		if (tooltipType = "Message"){
+
+		}
+	})
+
+	//pop up 
+	$(".pop-up-alert").on("click", function(x	){
+		$(this).fadeOut(300);
+	})
+
+	$(".close-pop-up").on("click", function(){
+		$(this).parent().parent().parent().fadeOut(300);
+	})
+
+
+	$(".additional-details [id*='add-']").on("click", function(){
+		var type = $(this).attr("id");
+		type = type.replace('add-','');
+		console.log(type);
+		$(".pop-up-add-"+type).css({
+			'display' : 'flex'
+		});
+	})
+
+
+	// show pop up	
+	$(".confirm-info").on("click", function(){
+
+		popUp(
+			'info',
+			'Additional details such as publication, presentation, fund source and patents can'+
+			' be appended right after adding research by clicking <u><b>next</b></u>.'
+		)
+
+
+
+	})
+
+
+	// type -- info / alert 
+	// text -- any string
+	function popUp(type, text){
+		
+		$(".pop-up-alert").css({
+			'display' : 'flex'
+		});
+
+		switch(type){
+			case 'info' : 
+				$(".pop-up-type").html("Information")
+				$(".pop-up-body").html(text)
+				break;
+
+			case 'alert' : 
+				$(".pop-up-type").html("Alert")
+				break;
+		}
+	}
+
+
+	
+
+	
+
+
+	
+})
+

@@ -1,0 +1,38 @@
+.textarea-query{
+    padding: 5px 10px;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+}
+
+.textarea-query > div, .textarea-query>input{
+    display: inline;
+}
+
+.textarea-query>input{
+    border: none;
+    width: auto;
+    
+}
+
+.queued-query > div{
+    display: inline;
+}
+
+.dropdown-suggestions {
+    display: none;
+    position: fixed;
+    background-color: white;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+}
+
+.dropdown-suggestions .dropdown-item-c{
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.dropdown-suggestions .dropdown-item-c:hover{
+    background-color: #cccccc;
+    
+}
+
+

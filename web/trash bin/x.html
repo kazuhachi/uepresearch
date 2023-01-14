@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)file:///C:/Users/ACE/Desktop/web/index.html -->
+<html><div class="header">
+		<div class="left-header">
+			<div class="slide-cont">
+				<div class="btn-slide-cont border-rad-1 cus-btn" tooltip-title="Toggles navigation">
+					<i class="fas fa-bars"></i>
+				</div>
+			</div>
+			<div class="web-name-cont">
+				<div class="web-name">
+					UEP Research Clearing House
+				</div>
+			</div>
+		</div>
+		<div class="right-header">			
+			<div class="quick-acc-cont " >
+				<div class="quick-acc-profile cus-btn border-rad-1 float-right">
+					<div class="name border-rad-1">
+						<span class="user-ico">
+							<i class="fas fa-user-alt icos"></i>
+						</span>
+						<span class="user-label">
+<?php
+							echo $_SESSION['userName'];
+?>
+						</span>
+					</div>
+					<div class="option border-rad-1" id="profile-option">
+						<div class="item">
+							<i class="fas fa-user-alt"></i>
+							My Profile
+						</div>
+						<div class="item" id="logout-button">
+							<i class="fas fa-sign-out-alt"></i> 
+							Log out
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="assets/x.png"><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	<title>Welcome - Dashboard</title>
+	<link rel="stylesheet" href="./x_files/main.css">
+	<script type="text/javascript" src="./x_files/jquery.js.download"></script>
+    <link rel="icon" href="./x_files/x.png" type="image/gif" sizes="16x16">
+
+
+	<!-- APIs -->
+	<link rel="stylesheet" href="./x_files/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="./x_files/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+	<!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> -->
+
+	<script src="./x_files/bootstrap.min.js.download" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+	<script type="text/javascript" src="./x_files/jquery.min.js.download"></script>
+	<script type="text/javascript" src="./x_files/moment.min.js.download"></script>
+	<script type="text/javascript" src="./x_files/daterangepicker.min.js.download"></script>
+	<link rel="stylesheet" type="text/css" href="./x_files/daterangepicker.css">
+
+	<!-- /APIs -->
+
+	<link rel="stylesheet" type="text/css" href="./x_files/datepicker.css">
+
+	<!-- my script -->
+	<script type="text/javascript" src="./x_files/main.js.download"></script>
+	<script type="text/javascript" src="./x_files/researchjs.js.download"></script>
+
+
+	<script type="text/javascript" src="./x_files/datepicker.js.download"></script>
+
+
+</head>
+<body>
+	<div class="header" style="
+    /* display: none; */
+    margin-left: 200px;
+    border-left: 1px solid #eaeaea;
+">
+		<div class="row">
+			<div class="col-sm-8 col-6">
+				<!-- <div class="slide-cont" style=" -->
+    /* display: none; */
+">
+					<div class="btn-slide-cont border-rad-1 cus-btn" tooltip-title="Toggles navigation">
+						<i class="fas fa-bars"></i>
+					</div>
+				</div>
+				<div class="web-name-cont">
+					<div class="web-name" style="
+    color: grey;
+">
+						UEP Research Clearing House
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4 col-6 ">				
+				<div class="quick-acc-cont ">
+					<div class="quick-acc-profile cus-btn border-rad-1 float-right">
+						<div class="name border-rad-1">
+							Mark Vincent
+						</div>
+						<div class="option border-rad-1" id="profile-option" style="display: none;">
+							<div class="item">
+								<i class="fas fa-user-alt"></i>
+								My Profile
+							</div>
+							<div class="item">
+								<i class="fas fa-sign-out-alt"></i> 
+								Log out
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="inner-body">
+		
+		<div class="nav-list-cont" data-visible="yes" style="position: fixed; margin-left: 0px; border-right: 1px solid rgb(234, 234, 234);">
+    <div class="" style="
+    padding: 10px 10px;
+    text-align: center;
+    width: 100%;
+">
+        <img src="./x_files/x.png" style="width: 100px;"><img src="./x_files/y.png" style="width: 75px;display: none;">
+    
+    </div>
+			<!-- <div class="nav-list" style="s -->
+">
+				<div class="nav-item-cont">
+					<div class="nav-item" id="research-nav" style="
+    border-top: 1px solid #cccccc;
+">
+						<i class="fas  fa-book icos"></i> 
+						<div class="nav-name">Research</div>
+						<i class="fas fa-angle-right" data-rotated="false" style="transform: rotate(0deg); transition: all 0.2s ease 0s;"></i>
+					</div>
+					<div class="sub-nav" style="display: none;">
+						<div class="sub-nav-item">Research List</div>
+						<div class="sub-nav-item">Add Research</div>
+					</div>
+				</div>
+				<div class="nav-item-cont">
+					<div class="nav-item" id="author-nav">
+						<i class="fas fa-user-alt icos"></i>
+						<div class="nav-name">Author</div>
+						<i class="fas fa-angle-right" data-rotated="true" style="transform: rotate(90deg); transition: all 0.2s ease 0s;"></i>
+					</div>
+				</div>
+				<div class="nav-item-cont">
+					<div class="nav-item" id="college-nav">
+						<i class="fas fa-building icos"></i>
+						<div class="nav-name">College</div>
+						<i class="fas fa-angle-right" data-rotated="true" style="transform: rotate(90deg); transition: all 0.2s ease 0s;"></i>
+					</div>
+				</div>
+				<div class="nav-item-cont">
+					<div class="nav-item" id="fund-nav">
+						<i class="fas fa-coins icos"></i>
+						<div class="nav-name">Fund Source</div>
+						<i class="fas fa-angle-right" data-rotated="false" style="transform: rotate(0deg); transition: all 0.2s ease 0s;"></i>
+					</div>
+				</div>
+			</div>
+		</div><div class="inner-content" style="margin-left: 200px; border: 1px solid rgb(234, 234, 234); background-color: rgb(255, 255, 255); height: 1000px;">
+			<div class="header-content border-rad-1 bordered-box">
+				<div class="header-tag">
+					Research List
+				</div>
+				<div class="dir">
+					Research &gt; Research List
+				</div>
+
+			</div>
+
+			<div class="sub-inner-content	">
+				<!-- <form method="post">
+					<div class="advance-search-container-row">
+						<div class="search-inputs">
+							<div class="input-label">
+									Title
+							</div>
+							<input type="text" id="title" name="title">
+						</div>
+						<div class="search-inputs">
+							<div class="input-label">
+									Author
+							</div>
+							<input type="text" id="title" name="author">
+						</div>						
+						<div class="search-inputs">
+							<div class="input-label">
+									Campus
+							</div>
+							<select>
+								<option>UEP</option>
+								<option>Lao-aong</option>
+							</select>
+						</div>
+
+						<div class="search-inputs">
+							<div class="input-label">
+									Date Started
+							</div>
+							<input type="text" id="title" name="date-started" data-toggle="datepicker" autocomplete="off">
+						</div>
+						<div class="search-inputs">
+							<div class="input-label">
+									Date Finished
+							</div>
+							<input type="text" id="title" name="date-finished"  data-toggle="datepicker" autocomplete="off">
+						</div>
+						<div class="search-inputs checkboxed">
+							<div class="input-label">
+									Funded
+							</div>
+							<div class="checkflag">
+								<i class="fas fa-check"></i>
+							</div>
+							<input type="checkbox" data-toggle="unchecked">
+							<input type="text" id="title" name="patent-search">
+						</div>
+						<div class="search-inputs checkboxed">
+							<div class="input-label">
+									Is Published
+							</div>
+							<div class="checkflag">
+								<i class="fas fa-check"></i>
+							</div>
+							<input type="checkbox" data-toggle="unchecked">
+							<input type="text" id="title" name="patent-search">
+						</div>
+						<div class="search-inputs checkboxed">
+							<div class="input-label">
+									Presented
+							</div>
+							<div class="checkflag">
+								<i class="fas fa-check"></i>
+							</div>
+							<input type="checkbox" data-toggle="unchecked">
+							<input type="text" id="title" name="patent-search">
+						</div>
+						<div class="search-inputs checkboxed">
+							<div class="input-label">
+									Patented
+							</div>
+							<div class="checkflag">
+								<i class="fas fa-check"></i>
+							</div>
+							<input type="checkbox" data-toggle="unchecked">
+							<input type="text" id="title" name="patent-search">
+						</div>
+						<div class="submit-que">
+							<button name="search-research">
+								Search
+							</button>
+						</div>
+					</div>
+				</form>
+ -->
+			</div>			
+			<div class="sub-inner-content">
+				<div class="table-nav-top">
+					<div class="data-num">
+						<label for="data-num-item">Show</label>
+						<select id="data-num-item" class="data-num-item border-rad-1">
+							<option>10</option>
+							<option>25</option>
+							<option>50</option>
+							<option>100</option>
+							<option>200</option>
+						</select>
+						<label for="data-num-item">items</label>
+					</div>
+
+					<!-- <div class="search-container">
+
+						<div class="search-box border-rad-1">
+							<input type="text" class="search-research" placeholder="title..">
+							<i class="fas fa-search"></i>
+						</div>
+						<div class="adv-search-container border-rad-1">
+							Advance search
+							<i class="fas fa-ellipsis-v"></i>
+						</div>
+
+					</div> -->
+				</div>
+				<div class="table-container table-responsive-xl">
+					<table class="table table-hover table- mx-1">
+						<thead>
+					    <tr data-rable="no">
+						    <th scope="col"></th>
+						    <th scope="col">Title</th>
+						    <th scope="col">Authors</th>
+						    <th scope="col">Campus</th>
+						    <th scope="col">Status</th>
+						    <th scope="col">Date completed</th>
+						    <th scope="col">Date finished</th>
+						    <th scope="col">Presented</th>
+						    <th scope="col">Patented</th>
+					    </tr>
+					  </thead>
+					  <tbody>
+					    <tr>
+						    <th scope="row">1</th>
+						    <td>Web-based Research Clearing House</td>
+						    <td>Mark , Dimple, Kevyn, Jonathan</td>
+						    <td>UEP</td>
+						    <td>New</td>
+						    <td>Feb 10, 2018</td>
+						    <td>-</td>
+						    <td>Yes</td>
+						    <td>No</td>
+					    </tr>
+					    <tr>
+						    <th scope="row">2</th>
+						    <td>Jacob</td>
+						    <td>Thornton</td>
+						    <td>UEP</td>
+						    <td>Finished</td>
+						    <td>Jul 10, 2018</td>
+						    <td>Jan 10, 2018</td>
+						    <td>No</td>
+						    <td>No</td>
+					    </tr>
+					    <tr>
+						    <th scope="row">3</th>
+						    <td colspan="2">Larry the Bird</td>
+						    <td>Lao-ang</td>
+						    <td>On going</td>
+						    <td>Feb 10, 2018</td>
+						    <td>-</td>
+						    <td>Yes</td>
+						    <td>Yes</td>
+					    </tr>
+					  </tbody>
+					</table>
+				</div>
+			
+				<!-- <table class="table table-sm table-hover border-rad-1" oncontextmenu="return false">
+				  <thead>
+				    <tr data-rable="no">
+					    <th scope="col"></th>
+					    <th scope="col">Title</th>
+					    <th scope="col">Authors</th>
+					    <th scope="col">Campus</th>
+					    <th scope="col">Date completed</th>
+					    <th scope="col">Date finished</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr>
+					    <th scope="row">1</th>
+					    <td>Web-based Research Clearing House</td>
+					    <td>Mark , Dimple, Kevyn, Jonathan</td>
+					    <td>UEP</td>
+					    <td>Feb 10, 2018</td>
+					    <td>Aug 10, 2018</td>
+				    </tr>
+				    <tr>
+					    <th scope="row">2</th>
+					    <td>Jacob</td>
+					    <td>Thornton</td>
+					    <td>UEP</td>
+					    <td>Jul 10, 2018</td>
+					    <td>Jan 10, 2018</td>
+				    </tr>
+				    <tr>
+					    <th scope="row">3</th>
+					    <td colspan="2">Larry the Bird</td>
+					    <td>Lao-ang</td>
+					    <td>Feb 10, 2018</td>
+					    <td>Jul 10, 2018</td>
+				    </tr>
+				  </tbody>
+				</table> -->
+				<div class="table-nav-bottom resae">
+					<div class="data-navigator">
+						<div class="start-nav">
+							<i class="fas fa-angle-double-left"></i>
+						</div>
+						<div class="start-nav">
+							1
+						</div>
+						<div class="start-nav">
+							2
+						</div>
+						<div class="start-nav">
+							3
+						</div>
+						<div class="start-nav">
+							4
+						</div>
+						<div class="start-nav">
+							5
+						</div>
+						<div class="last-nav">
+							<i class="fas fa-angle-double-right"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+			</div>
+<br>
+<br>
+<br>
+			
+		</div>
+	
+	<!-- <div class="tooltip-cus tooltip-error">
+		Field cannot be empty.
+	</div> -->
+	<div class="pop-menu" oncontextmenu="return false">
+		<div class="pop-item">
+			<i class="fas fa-edit"></i>
+			<div class="item-name">modify</div>
+		</div>
+		<div class="pop-item">
+			<i class="fas fa-eye"></i>
+			<div class="item-name">Show Abstract</div>
+		</div>
+	</div>
+
+
+</body></html>
